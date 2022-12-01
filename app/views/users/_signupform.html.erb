@@ -1,0 +1,34 @@
+<h1>Sign Up</h1>
+
+<%= form_with model: user do |form| %>
+
+  <div>
+    <%= form.label :name %><br>
+    <%= form.text_field :name %>
+  </div>
+    <br>
+  <div>  
+    <%= form.label :email %><br>
+    <%= form.email_field :email %>
+  </div>
+    <br>
+  <div>
+    <%= form.label :phone_number %><br>
+    <%= form.telephone_field :phone_number %>
+  </div>
+    <br>
+  <div>
+    <%= form.label :password %><br>
+    <%= form.password_field :password_digest %>
+  </div>
+
+   <div>
+    <%= form.label :avatar %><br>
+    <%= form.file_field :avatar %>
+  </div>
+
+
+    <br>
+  <%= form.submit %>
+
+<% end %>

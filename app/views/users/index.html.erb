@@ -1,0 +1,16 @@
+<h1> ShoeForMe </h1>
+<p style="color: green"><%= notice %></p>
+
+  <% @users.each do |user| %> 
+     <%= image_tag user.avatar %> <br>
+     <%= user.name %>  <br>
+     <%= user.email %> <br>
+     <%= button_to "delete", {:controller => :users, :action => 'destroy', :id => user.id }, :method => :delete %> <br>
+  <% end %>  
+
+    <br>
+<%= link_to "Sign Up", new_user_path %>
+<%= link_to "login", new_session_path %>
+<%= link_to "createproduct", new_product_path %>
+<%= link_to " see all products", products_url %>
+
